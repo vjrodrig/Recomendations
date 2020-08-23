@@ -33,9 +33,9 @@ st.markdown(
     )
 
 
-df1=pd.read_csv(r'C:\Users\vrodriguez\Documents\GitHub\Recomendations\recom.csv')
+df1=pd.read_csv('recom.csv')
 df1['Date']=pd.to_datetime(df1['Date'])
-igpa_inx=pd.read_csv(r'C:\Users\vrodriguez\Documents\GitHub\Recomendations\igpa.csv')
+igpa_inx=pd.read_csv('igpa.csv')
 
 recom = pd.pivot_table(data=df1, index=['Issuer_Local_Industry','An_Name','Issuer_Compass_Alias','Type','Account_Id'],columns=['Date'], values=['Value'])
 
